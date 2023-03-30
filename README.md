@@ -12,4 +12,4 @@ npm install
 
 npm run cucumbertest
 
-Then you can view the html report in following path Cypress_AutomationE2E_Framework/cucumber-report.html
+Then you can view the html report in following path CypressAutomationE2EFramework/cucumber-report.html
