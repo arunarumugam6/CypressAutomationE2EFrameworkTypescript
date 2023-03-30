@@ -1,6 +1,7 @@
-#Igonre node_modules folder
+#Ignore node_modules folder
 node_modules
 
 #Ignore the cucumber report
 
 cucumber-report.html
+cucumber-messages.ndjson
