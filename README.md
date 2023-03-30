@@ -4,7 +4,7 @@ Cypress end to end framework, In that framework you can perform End to End Web A
 
 Installation Guide
 
-1) Run the following command, to install the dependencies of the framework
+1) Clone the repo in your local and run the following command, to install the dependencies of the framework
 
 npm install
 
