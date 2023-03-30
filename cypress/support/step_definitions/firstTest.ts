@@ -69,4 +69,15 @@ Then("verify the Thank you place the order message is displayed", () => {
 
 });
 
+When("Add the product to cart {string}", (Product:string) => {
+
+    lp.searchfield().clear()
+    lp.searchfield().type(Product)
+    cy.wait(2000)
+    lp.plpProduct().should('include.text', Product)
+    lp.addToCartButton().click()
+    lp.addedButton().should('include.text', 'ADDED')
+
+});
+
 
