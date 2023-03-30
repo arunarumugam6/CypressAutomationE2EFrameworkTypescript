@@ -6,6 +6,7 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 module.exports = defineConfig({
   e2e: {
     specPattern: "**/*.feature",
+    video: false,
     async setupNodeEvents(
       on: Cypress.PluginEvents,
       config: Cypress.PluginConfigOptions
