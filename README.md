@@ -1,4 +1,4 @@
-# Cypress_AutomationE2E_Framework
+# Cypress E2E Automation Framework
 
 Cypress End to end Framework
 
