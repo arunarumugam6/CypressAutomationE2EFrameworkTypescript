@@ -31,17 +31,5 @@ it('Scenario 1',()=>{
       cy.wait(2000)
       cy.get('.product-action > button').invoke('show').click()
     })
-
-    it("Scenario 3",()=>{
-
-      cy.visit('https://rahulshettyacademy.com/seleniumPractise/#/')
-      searchValues.forEach(value=>{
-        lp.searchfield().type(value.searchData)
-        lp.searchfield().clear()
-      })
-      cy.login('arun','password')
-      
-
-    })
 }
 )
