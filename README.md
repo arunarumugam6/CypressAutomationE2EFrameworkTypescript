@@ -1,4 +1,4 @@
-# Cypress E2E Automation Framework
+# Cypress E2E Automation Framework - Typescript
 
 Cypress end to end framework, In that framework you can perform End to End Web Automation testing, Integration testing and API testing
 
