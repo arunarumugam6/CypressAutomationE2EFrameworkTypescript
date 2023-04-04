@@ -4,8 +4,14 @@ import { addCucumberPreprocessorPlugin } from "@badeball/cypress-cucumber-prepro
 import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild";
 
 module.exports = defineConfig({
+  chromeWebSecurity: true,
+  screenshotOnRunFailure: true,
+  env:{
+    baseUrl: "https://rahulshettyacademy.com/seleniumPractise/#/",
+  },
   e2e: {
     specPattern: "**/*.feature",
+    //specPattern: "**/*.cy.ts",
     video: false,
     moduleResolution: "nodenext",
     async setupNodeEvents(

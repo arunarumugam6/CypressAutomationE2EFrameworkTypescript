@@ -12,7 +12,7 @@ let ocp = new orderCompletionPage()
 
 Given("User navigate to Greencart webshop", () => {
 
-    cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/", { timeout: 10000 })
+    cy.visit(Cypress.env('baseUrl'), { timeout: 10000 })
     cy.title().should('eq', 'GreenKart - veg and fruits kart')
 
 });
