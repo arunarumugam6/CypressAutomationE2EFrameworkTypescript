@@ -6,10 +6,9 @@ import createEsbuildPlugin from "@badeball/cypress-cucumber-preprocessor/esbuild
 module.exports = defineConfig({
   chromeWebSecurity: true,
   screenshotOnRunFailure: true,
-  env:{
-    baseUrl: "https://rahulshettyacademy.com/seleniumPractise/#/",
-  },
+
   e2e: {
+    baseUrl: "https://rahulshettyacademy.com/seleniumPractise/#/",
     specPattern: "**/*.feature",
     //specPattern: "**/*.cy.ts",
     video: false,
