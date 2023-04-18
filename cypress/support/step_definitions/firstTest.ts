@@ -31,11 +31,11 @@ Then("Click cart link", () => {
     lp.cartButton().click()
 });
 
-Then("click the proceed to checkout link", () => {
+Then("Click the proceed to checkout link", () => {
     lp.proceedToCart().click({ force: true })
 });
 
-Then("click Place order on cart page", () => {
+Then("Click Place order on cart page", () => {
     cy.url().should('include', '/cart')
     //Click the Place Order Button
     cp.placeOrderButton().should('be.visible')
@@ -43,7 +43,7 @@ Then("click Place order on cart page", () => {
 
 });
 
-Then("check the Agree terms and condition checkbox", () => {
+Then("Check the Agree terms and condition checkbox", () => {
     //Check the Terms and conditions checbox
     ccp.termsAndConditionCheckbox().check().should('be.checked')
 
@@ -55,14 +55,14 @@ Then("Select the country India in select country dropdown", () => {
     ccp.dropDown().select('India')
 });
 
-Then("click the Proceed button", () => {
+Then("Click the Proceed button", () => {
     //Click the Proceed Button
     ccp.ProceedButton().should('be.visible')
     ccp.ProceedButton().click()
 
 });
 
-Then("verify the Thank you place the order message is displayed", () => {
+Then("Verify the Thank you place the order message is displayed", () => {
 
     //Verify the Thank you message
     ocp.thankYouMessage().should('be.visible')

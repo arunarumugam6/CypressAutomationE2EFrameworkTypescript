@@ -35,7 +35,7 @@ declare global {
    cy.log(password)
 })
 
-Cypress.Commands.add('waitTillElementVisible',function(locator){
+Cypress.Commands.add('waitTillElementVisible',function(locator:string){
    return cy.get(locator,{timeout:10000}).should('be.visible')
 })
 
