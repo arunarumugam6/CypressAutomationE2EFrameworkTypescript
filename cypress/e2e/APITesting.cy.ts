@@ -1,5 +1,15 @@
 describe('API test', () => {
-  let message
+let message
+//let  responseValue;
+let saveValues={
+    responseValue:"",
+    set saveResponse(value){
+        this.responseValue=value;
+    },
+    get saveResponse(){
+        return this.responseValue;
+    }
+}
  
   it('Scenario_1', () => {
 
@@ -63,11 +73,19 @@ describe('API test', () => {
      expect(response.body).have.property('Msg').to.eq(resData.Msg)
      expect((response.body)).have.property('ID').to.be.a('String')
      message =response.body.Msg
+     saveValues.saveResponse=response.body;
      cy.log("Inside loop: "+message)
     })
     .then(function(){
       cy.log("Outside loop: "+message)
     })
    
+})
+
+it("Scenario_5",()=>{
+
+  cy.log("Response of Scenario 4: ")
+  cy.log(saveValues.saveResponse)
+
 })
 })

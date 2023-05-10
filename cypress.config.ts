@@ -9,8 +9,8 @@ module.exports = defineConfig({
 
   e2e: {
     baseUrl: "https://rahulshettyacademy.com/seleniumPractise/#/",
-    specPattern: "**/*.feature",
-    //specPattern: "**/*.cy.ts",
+    //specPattern: "**/*.feature",
+    specPattern: "**/*.cy.ts",
     video: false,
     moduleResolution: "nodenext",
     async setupNodeEvents(
