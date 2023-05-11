@@ -15,7 +15,7 @@ beforeEach(function(){
 
 it('Scenario 1',()=>{
        
-       cy.visit(Cypress.env('baseUrl'))
+       cy.visit("")
        cy.fixture('example').then(function(data){
        lp.searchfield().type(data.searchData1)
         cy.waitTillElementVisible(lp.searchBtn)
@@ -26,7 +26,7 @@ it('Scenario 1',()=>{
     })
     it('Scenario 2',()=>{
 
-      cy.visit(Cypress.env('baseUrl'))
+      cy.visit("")
       lp.searchfield().type(lists.searchData2)
       cy.wait(2000)
       cy.get('.product-action > button').invoke('show').click()
