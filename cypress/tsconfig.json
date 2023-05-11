@@ -3,8 +3,10 @@
       "target": "ES6",
       "lib": ["ES6", "dom"],
       "types": ["cypress", "node","cypress-plugin-api"],
-      "resolveJsonModule": false, 
+      "resolveJsonModule": true, 
       "baseUrl": "../",
+      "moduleResolution": "node",
+      "allowSyntheticDefaultImports":true,
       "paths": {
         "@fixtures/*":[
           "cypress/fixtures/*"

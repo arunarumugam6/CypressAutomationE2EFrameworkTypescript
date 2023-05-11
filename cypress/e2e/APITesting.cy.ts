@@ -1,3 +1,5 @@
+import data from "../fixtures/testdataJson.json"
+
 describe('API test', () => {
 let message
 //let  responseValue;
@@ -12,13 +14,14 @@ let saveValues={
 }
  
   it('Scenario_1', () => {
-
+/*
     const data ={
       "name":"Learn Appium Automation with Javascript",
       "isbn":"bcde",
       "aisle":"22s1",
       "author":"John foe"
     }
+*/
     cy.request('POST','http://216.10.245.166/Library/Addbook.php',data
     ).then(function(response){
        expect(response.status).to.eq(200)
@@ -61,16 +64,18 @@ let saveValues={
     "Msg": "successfully added",
     "ID": "bcde22s1"
   }
+  /*
   const data ={
     "name":"Learn Appium Automation with Javascript",
     "isbn":"bcde",
     "aisle":"22s1",
     "author":"John foe"
-  }
+  } */
   cy.api('POST','http://216.10.245.166/Library/Addbook.php',data
   ).then(function(response){
      expect(response.status).to.eq(200)
-     expect(response.body).have.property('Msg').to.eq(resData.Msg)
+     //expect(response.body).have.property('Msg').to.eq(resData.Msg)
+     expect(response.body.Msg).to.eq(resData.Msg)
      expect((response.body)).have.property('ID').to.be.a('String')
      message =response.body.Msg
      saveValues.saveResponse=response.body;
@@ -87,5 +92,10 @@ it("Scenario_5",()=>{
   cy.log("Response of Scenario 4: ")
   cy.log(saveValues.saveResponse)
 
+})
+
+it("Scenario_6",()=>{
+
+  cy.log("Test the Json file: "+data.name)
 })
 })
