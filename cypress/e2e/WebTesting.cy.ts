@@ -25,9 +25,9 @@ it('Scenario 1',()=>{
        })
     })
     it('Scenario 2',()=>{
-
       cy.visit("")
       lp.searchfield().type(lists.searchData2)
+      cy.log(lists.searchData2)
       cy.wait(2000)
       cy.get('.product-action > button').invoke('show').click()
     })
